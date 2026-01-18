@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: discord-deobfuscator-bot
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+    healthCheckPath: /
+    autoDeploy: true
